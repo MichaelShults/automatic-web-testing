@@ -1,0 +1,21 @@
+<html>
+<head>
+    <title> Search Page </title>
+</head>
+<body>
+    <h2>Search</h2>
+    <form method="post">
+        <input type="text" name="q" placeholder="search for....">
+        <button type="submit"> Submit </button>
+    </form>
+    
+    <h2>Results</h2>
+    {% for result in results %}
+    <h3>{{ result }}<h3> <br>
+    {% else %}
+        {% if results == [] %}
+            <p> no results </p>
+        {% endif %}
+    {% endfor %}
+</body>
+</html>
